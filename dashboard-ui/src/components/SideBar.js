@@ -32,44 +32,37 @@ const SideBar = () => {
       name: "Settings",
       icon: <MdSettings />,
     },
-    {
-      path: "/samples",
-      name: "Samples",
-      icon: <MdDataExploration />,
-    },
   ];
 
   return (
-    <div className={styles.MenuHolder}>
+    <div
+      style={{ width: isOpen ? "200px" : "70px" }}
+      className={styles.SideBar}
+    >
       <div
+        className={styles.MenuHeader}
         style={{ width: isOpen ? "200px" : "70px" }}
-        className={styles.SideBar}
       >
-        <div
-          className={styles.MenuHeader}
-          style={{ width: isOpen ? "200px" : "70px" }}
-        >
-          <HiLightningBolt onClick={toggleSidebar} />
-          <h4 style={{ display: isOpen ? "block" : "none" }}>Name</h4>
-        </div>
-        <nav className={styles.SideMenu}>
-          {menuItem.map((item, index) => (
-            <NavLink to={item.path} key={index} className={styles.SideLink}>
-              <div className={styles.Icon}>{item.icon}</div>
-              <motion.span
-                style={{ display: isOpen ? "block" : "none" }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isOpen ? 1 : 0 }}
-                transition={{ delay: 0.3, ease: "easeIn" }}
-              >
-                {item.name}
-              </motion.span>
-            </NavLink>
-          ))}
-        </nav>
-        <div className={styles.MenuFooter}>
-          <p>Footer</p>
-        </div>
+        <HiLightningBolt onClick={toggleSidebar} />
+        <h4 style={{ display: isOpen ? "block" : "none" }}>Name</h4>
+      </div>
+      <nav className={styles.SideMenu}>
+        {menuItem.map((item, index) => (
+          <NavLink to={item.path} key={index} className={styles.SideLink}>
+            <div className={styles.Icon}>{item.icon}</div>
+            <motion.span
+              style={{ display: isOpen ? "block" : "none" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isOpen ? 1 : 0 }}
+              transition={{ delay: 0.3, ease: "easeIn" }}
+            >
+              {item.name}
+            </motion.span>
+          </NavLink>
+        ))}
+      </nav>
+      <div className={styles.MenuFooter}>
+        <p>Footer</p>
       </div>
     </div>
   );
