@@ -1,0 +1,91 @@
+.SideBar {
+    background: radial-gradient(circle, rgba(13,125,163,0.3) 0%, rgba(1,32,60,0.2) 80%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid rgba(4, 87, 102, 0.6);
+    box-shadow: inset -6px 0px 10px -5px rgba(0, 19, 53, 0.6);
+    z-index: 5;
+    transition: all 0.5s ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.MenuHeader {
+    display: flex;
+    width: 100%;
+    border-top-right-radius: 20px;
+    background-color: rgba(0, 22, 37, 0.5);
+    border-bottom: 1px solid rgba(8, 218, 255, 0.6);
+    transition: all 0.5s ;
+}
+
+.MenuHeader svg {
+    font-size: 30px;
+    margin: 5px;
+    padding: 10px;
+    color: rgb(8, 218, 255);
+    cursor: pointer;
+    transition: all 0.5s ;
+}
+
+.MenuHeader svg:hover {
+    color: rgb(169, 255, 208);
+    box-shadow: 0 0 5px #32e4db;
+    border-radius: 15px;
+}
+
+.SideMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+.SideLink {
+    display: flex;
+    color: rgb(188, 235, 253);
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px;
+    margin: 15px 5px 15px 5px;
+    gap: 10px;
+    transition: all 0.6s ;
+}
+
+.SideLink span {
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SideLink:hover {
+    background-color: rgb(7, 138, 161);
+    border-radius: 10px;
+}
+
+.Icon {
+    font-size: 25px;
+    margin-right: 8px;
+    padding-top: 2px;
+    color: #54e5f0;
+}
+
+.Icon svg {
+    vertical-align: middle;
+}
+
+.MenuFooter {
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(0, 22, 37, 0.5);
+    border-top: 1px solid rgba(8, 218, 255, 0.6);
+    transition: all 0.5s ;
+}
+
+
