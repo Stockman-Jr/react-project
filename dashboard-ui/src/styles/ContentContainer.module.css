@@ -1,9 +1,5 @@
 .Content {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: radial-gradient(circle, rgba(0, 92, 122, 0.2) 0%, rgba(1,32,60,0.5) 80%);
     border: 1px solid rgba(1, 35, 46, 0.2);
     border-radius: 20px;
