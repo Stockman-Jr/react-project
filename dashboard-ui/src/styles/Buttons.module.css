@@ -1,0 +1,55 @@
+.Btn {
+    --text-base: 205deg, 55%, 45%;
+    --text-hover: 202deg, 72%, 90%;
+    --shadow-start: 52deg, 100%, 72%;
+    --shadow-end: 205deg, 90%, 50%;
+    --shadow-inner: 196deg, 90%, 62%;
+    all: unset;
+    color: hsla(var(--text-base), 1);
+    font: 800 1.125rem/1.2 'Rajdhani', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5em;
+    max-width: 100%;
+    width: 6em;
+    background: inherit;
+    background-clip: padding-box;
+    border: 3px solid hsla(var(--text-base), 1);
+    border-radius: 2em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease-out;
+}
+
+.Btn::before, .Btn::after {
+    content: "";
+    border-radius: inherit;
+    transition: inherit;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .Btn::before {
+    inset: -0.2em;
+    z-index: -1;
+    background: linear-gradient(hsla(var(--shadow-start), 1), hsla(var(--shadow-end), 1));
+    filter: blur(0.7em) saturate(1.2);
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+  .Btn::after {
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px rgba(255, 255, 255, 0.7), 1px 1px 0 4px #fff;
+    mix-blend-mode: overlay;
+    opacity: 0;
+  }
+  .Btn:hover, .Btn:focus {
+    color: hsla(var(--text-hover), 1);
+    border-color: transparent;
+    box-shadow: inset 0 1.4em 0 hsla(var(--shadow-inner), 0.1), inset 0 0 1.4em hsla(var(--shadow-inner), 0.32), 0 1px 1px hsla(var(--shadow-inner), 0.32);
+  }
+  .Btn:hover::before, .Btn:hover::after, .Btn:focus::before, .Btn:focus::after {
+    transform: none;
+    opacity: 1;
+  }
