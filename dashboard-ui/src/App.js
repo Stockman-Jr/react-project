@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import SideBar from "./components/SideBar";
 import Dashboard from "./pages/Dashboard";
+import EssMonitor from "./pages/EssMonitor";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/ess-monitor" element={<h1>ESS monitor</h1>} />
+          <Route path="/ess-monitor" element={<EssMonitor />} />
           <Route path="/settings" element={<h1>Settings</h1>} />
         </Routes>
       </main>

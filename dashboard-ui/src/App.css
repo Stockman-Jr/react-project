@@ -37,3 +37,18 @@ h1 {
   text-align: center;
   align-items: center;
 }
+
+.path-ani {
+  animation: draw 10s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  0% {
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}

@@ -106,17 +106,6 @@ const BatterySVG = ({ radius, strokeWidth, progress, isCharging }) => {
         <text font-size="13" textAnchor="middle" stroke="white" x="30" y="45">
           {progress}%
         </text>
-        <text fontSize="8px" textAnchor="middle" stroke="white" x="30" y="-120">
-          <tspan x="30" y="-135">
-            L1: x A
-          </tspan>
-          <tspan x="30" y="-120">
-            L2: x A
-          </tspan>
-          <tspan x="30" y="-105">
-            L3: x A
-          </tspan>
-        </text>
       </svg>
     </div>
   );
