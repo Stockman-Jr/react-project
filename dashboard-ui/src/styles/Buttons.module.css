@@ -12,10 +12,10 @@
     text-align: center;
     padding: 0.5em;
     max-width: 100%;
-    width: 6em;
+    width: 10em;
     background: inherit;
     background-clip: padding-box;
-    border: 3px solid hsla(var(--text-base), 1);
+    border: 3px solid hsla(205deg, 55%, 45%, 1);
     border-radius: 2em;
     cursor: pointer;
     position: relative;

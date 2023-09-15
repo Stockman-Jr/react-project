@@ -53,14 +53,7 @@ const BatterySVG = ({ radius, strokeWidth, progress, isCharging }) => {
           stroke="#52def7"
           strokeWidth="2"
         />
-        <line
-          x1="30"
-          y1="-150"
-          x2="30"
-          y2="-160"
-          stroke="#52def7"
-          strokeWidth="2px"
-        />
+
         <g
           id="flow-animation"
           className={isCharging ? "path-ani" : null}
@@ -72,32 +65,29 @@ const BatterySVG = ({ radius, strokeWidth, progress, isCharging }) => {
           strokeLinecap="round"
           strokeDasharray="5,50"
         >
-          <rect
-            x="0"
-            y="-150"
-            width="60"
-            height="50"
-            rx="10"
+          <circle
+            r="20"
+            cx="30"
+            cy="-180"
             fill="none"
-          ></rect>
-          <line x1="30" y1="0" x2="30" y2="-100" />
+            stroke="#52def7"
+            strokeWidth="2"
+          />
+          <line x1="30" y1="0" x2="30" y2="-160" />
         </g>
-        <rect
-          x="0"
-          y="-150"
-          width="60"
-          height="50"
-          rx="10"
+        <circle
+          r="20"
+          cx="30"
+          cy="-180"
           fill="none"
-          stroke="#14dcff"
-          strokeWidth="2px"
-          strokeOpacity="0.7"
-        ></rect>
+          stroke="#52def7"
+          strokeWidth="2"
+        />
         <line
           x1="30"
           y1="0"
           x2="30"
-          y2="-100"
+          y2="-160"
           stroke="#14dcff"
           strokeWidth="2px"
           strokeOpacity="0.7"
@@ -107,6 +97,22 @@ const BatterySVG = ({ radius, strokeWidth, progress, isCharging }) => {
           {progress}%
         </text>
       </svg>
+      {/*
+      <svg width="200" height="75" viewBox="0 0 80 80">
+        <g>
+          <rect x="-60" y="15" width="100" height="2" fill="#14dcff"></rect>
+          <rect
+            x="40"
+            y="0"
+            width="100"
+            height="30"
+            fill="none"
+            stroke="#14dcff"
+            strokeWidth="2px"
+          ></rect>
+        </g>
+      </svg>
+*/}
     </div>
   );
 };

@@ -1,0 +1,39 @@
+.BatteryStats {
+    width: 100%;
+    position: relative;
+
+
+
+}
+
+.BoxLeft, .BoxRight {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(0, 91, 122, 0.5) 0%, rgba(1,32,60,0.5) 80%);
+    border: 2px solid rgb(1, 32, 61);
+    box-shadow: inset 0 1px 2px rgba(81, 198, 233, 0.8),
+    inset 0 -2px 0px rgba(10, 58, 129, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.3),
+    0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #0a121e;
+    border-radius: 20px;
+    width: 10%;
+    height: fit-content;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+}
+
+.BoxLeft {
+    position: absolute;
+    left: 15%;
+    top: 40%;
+}
+
+.BoxRight {
+    position: absolute;
+    right: 15%;
+    top: 40%;
+}
+
+
